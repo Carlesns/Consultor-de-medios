@@ -1,7 +1,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Carles Navarro</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&family=Plus+Jakarta+Sans:wght@300;500;600&display=swap">
 <style>
 /* TOKENS */
 :root {
@@ -64,11 +64,41 @@ nav.scrolled {
   -webkit-backdrop-filter: blur(12px);
 }
 .nav-logo {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.1rem;
-  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  cursor: default;
+}
+.nav-logo-bar {
+  width: 3px;
+  height: 36px;
+  background: var(--accent);
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+.nav-logo-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.nav-logo-name {
+  font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 0.88rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
   color: var(--text);
-  letter-spacing: 0.02em;
+  line-height: 1;
+}
+.nav-logo-role {
+  font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+  font-weight: 300;
+  font-size: 0.58rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--accent);
+  line-height: 1;
 }
 .nav-links {
   display: flex;
@@ -585,7 +615,13 @@ footer {
 
 <!-- NAV -->
 <nav id="nav">
-  <span class="nav-logo">Carles Navarro</span>
+  <div class="nav-logo">
+    <div class="nav-logo-bar"></div>
+    <div class="nav-logo-text">
+      <span class="nav-logo-name">Carles Navarro</span>
+      <span class="nav-logo-role">Media &amp; Comms</span>
+    </div>
+  </div>
   <ul class="nav-links">
     <li><a href="#servicios" data-i18n="nav_services">Servicios</a></li>
     <li><a href="#sobre-mi" data-i18n="nav_about">Sobre mí</a></li>
