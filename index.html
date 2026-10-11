@@ -379,9 +379,27 @@ nav.scrolled {
   line-height: 1.7;
 }
 
-/* CÓMO TRABAJO — numbered steps */
-.process-list {
+/* CÓMO TRABAJO — two-column layout with image */
+.process-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
   margin-top: 64px;
+}
+.process-image-col {
+  position: sticky;
+  top: 100px;
+}
+.process-image-col img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: 2px;
+  display: block;
+  filter: brightness(0.92) saturate(0.85);
+}
+.process-list {
   display: grid;
   gap: 0;
 }
@@ -413,6 +431,15 @@ nav.scrolled {
   color: var(--muted);
   line-height: 1.7;
   max-width: 56ch;
+}
+@media (max-width: 768px) {
+  .process-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .process-image-col {
+    position: static;
+  }
 }
 
 /* SERVICIOS */
@@ -722,34 +749,39 @@ footer {
 <!-- CÓMO TRABAJO -->
 <section class="section fade-in" id="como-trabajo">
   <p class="section-tag" data-i18n="process_tag">Cómo trabajo</p>
-  <h2 class="section-title" data-i18n="process_title">100% agnóstico. <em>Recomendación honesta</em> para conseguir impacto en negocio.</h2>
-  <div class="process-list">
-    <div class="process-step">
-      <div class="process-num">01</div>
-      <div class="process-content">
-        <h3 data-i18n="step1_h">Diagnóstico inicial</h3>
-        <p data-i18n="step1_p">Revisamos tu situación actual: qué estás haciendo, qué objetivos tienes, qué información tienes disponible. Sin formularios complicados, una conversación de 45 minutos.</p>
-      </div>
+  <h2 class="section-title" data-i18n="process_title">Análisis riguroso. Conclusiones claras. Próximos pasos concretos.</h2>
+  <div class="process-layout">
+    <div class="process-image-col">
+      <img src="assets/process-desk.jpg" alt="Análisis de plan de medios" loading="lazy" width="1200" height="675">
     </div>
-    <div class="process-step">
-      <div class="process-num">02</div>
-      <div class="process-content">
-        <h3 data-i18n="step2_h">Análisis y contraste</h3>
-        <p data-i18n="step2_p">Reviso los documentos relevantes (planes de medios, presupuestos, informes de resultados) y los contrasto con benchmarks reales de mercado y con mi experiencia directa.</p>
+    <div class="process-list">
+      <div class="process-step">
+        <div class="process-num">01</div>
+        <div class="process-content">
+          <h3 data-i18n="step1_h">Entiendo tu situación</h3>
+          <p data-i18n="step1_p">Una primera conversación para conocer tus objetivos, el contexto y las decisiones que tienes por delante. Sin formularios, sin burocracia.</p>
+        </div>
       </div>
-    </div>
-    <div class="process-step">
-      <div class="process-num">03</div>
-      <div class="process-content">
-        <h3 data-i18n="step3_h">Informe accionable</h3>
-        <p data-i18n="step3_p">Entrego un informe escrito con conclusiones concretas y pasos siguientes. No decks con mucho diseño y pocas respuestas. Texto directo que puedes llevar a una reunión.</p>
+      <div class="process-step">
+        <div class="process-num">02</div>
+        <div class="process-content">
+          <h3 data-i18n="step2_h">Analizo a fondo</h3>
+          <p data-i18n="step2_p">Reviso planes, presupuestos, KPIs y resultados. Los contrasto con benchmarks reales de mercado y con mi experiencia directa gestionando inversiones similares.</p>
+        </div>
       </div>
-    </div>
-    <div class="process-step">
-      <div class="process-num">04</div>
-      <div class="process-content">
-        <h3 data-i18n="step4_h">Seguimiento opcional</h3>
-        <p data-i18n="step4_p">Si necesitas apoyo continuo, puedo trabajar como advisor mensual. Un número fijo de horas a tu disposición, sin permanencia ni burocracia.</p>
+      <div class="process-step">
+        <div class="process-num">03</div>
+        <div class="process-content">
+          <h3 data-i18n="step3_h">Te doy criterio por escrito</h3>
+          <p data-i18n="step3_p">Recibes un informe con conclusiones, oportunidades de mejora y recomendaciones concretas. Algo que puedes llevar a una reunión y usar para tomar decisiones.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="process-num">04</div>
+        <div class="process-content">
+          <h3 data-i18n="step4_h">Apoyo continuo si lo necesitas</h3>
+          <p data-i18n="step4_p">Si quieres acompañamiento recurrente, trabajo como advisor mensual. Horas acordadas, sin permanencia, disponible cuando lo necesites.</p>
+        </div>
       </div>
     </div>
   </div>
