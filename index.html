@@ -468,6 +468,9 @@ nav.scrolled {
 .service-card.wide {
   grid-column: span 2;
 }
+.service-card.full {
+  grid-column: 1 / -1;
+}
 
 /* SOBRE MÍ */
 .about-layout {
@@ -629,7 +632,7 @@ footer {
   .hero-bg-word { font-size: clamp(80px, 30vw, 180px); }
   .audience-grid { grid-template-columns: 1fr; }
   .services-grid { grid-template-columns: 1fr; }
-  .service-card.wide { grid-column: span 1; }
+  .service-card.wide, .service-card.full { grid-column: span 1; }
   .about-layout { grid-template-columns: 1fr; gap: 48px; }
   .contact-grid { grid-template-columns: 1fr; gap: 48px; }
   .contact-inner { padding-inline: 20px; }
@@ -814,6 +817,10 @@ footer {
       <h3 data-i18n="sv5_h">Retainer mensual</h3>
       <p data-i18n="sv5_p">Un número de horas mensuales a tu disposición para consultas, revisiones y soporte continuo en tus decisiones de medios. Sin permanencia.</p>
     </div>
+    <div class="service-card full">
+      <h3 data-i18n="sv6_h">Equipos in-house de gestión de campañas</h3>
+      <p data-i18n="sv6_p">Si quieres internalizar la compra y optimización de medios, diseño el equipo contigo: qué perfiles necesitas, qué plataformas contratar (DSP, ad server, medición) y qué se queda dentro y qué sigue en la agencia. Acompaño la selección, la puesta en marcha y la formación hasta que el equipo funcione solo.</p>
+    </div>
   </div>
 </section>
 
@@ -928,7 +935,7 @@ const i18n = {
     sv2_h:"Validación de presupuesto", sv2_p:"Contrasto costes y condiciones con referencias reales de mercado para que entiendas qué estás pagando y dónde puedes mejorar las condiciones.",
     sv3_h:"KPIs y medición de resultados", sv3_p:"Definimos los indicadores que realmente miden el rendimiento de tu inversión: los que conectan medios con negocio. Incluye revisión del modelo de atribución y del reporting.",
     sv4_h:"Evaluación y selección de agencia", sv4_p:"Comparo propuestas con criterios técnicos y de negocio homogéneos, sin intereses comerciales en la decisión. Para que elijas por razones sólidas, no por el deck más bonito.",
-    sv5_h:"Asesoramiento mensual", sv5_p:"Incorporas criterio experto a tus decisiones de medios sin ampliar el equipo. Horas acordadas cada mes para revisiones, consultas y reuniones con agencias. Sin permanencia.",
+    sv5_h:"Asesoramiento mensual", sv5_p:"Incorporas criterio experto a tus decisiones de medios sin ampliar el equipo. Horas acordadas cada mes para revisiones, consultas y reuniones con agencias. Sin permanencia.", sv6_h:"Equipos in-house de gestión de campañas", sv6_p:"Si quieres internalizar la compra y optimización de medios, diseño el equipo contigo: qué perfiles necesitas, qué plataformas contratar (DSP, ad server, medición) y qué se queda dentro y qué sigue en la agencia. Acompaño la selección, la puesta en marcha y la formación hasta que el equipo funcione solo.",
     about_tag:"Sobre mí", about_title:"He estado en los dos lados de la mesa",
     about_p1:"He pasado 20 años trabajando en medios: primero en agencias como Arena Media, Focus Media e Infinity Media, y después gestionando la inversión publicitaria en los equipos de marketing de Affinity Petcare y PepsiCo.",
     stat1_label:"Años en el sector", stat2_label:"€ en inversión publicitaria gestionada", stat3_label:"Marcas acompañadas",
@@ -965,7 +972,7 @@ const i18n = {
     sv2_h:"Budget validation", sv2_p:"I benchmark costs and conditions against real market references so you understand what you're paying and where you can improve terms.",
     sv3_h:"KPIs and results measurement", sv3_p:"We define the indicators that genuinely measure your investment's performance — the ones that connect media to business. Includes a review of your attribution model and reporting.",
     sv4_h:"Agency evaluation and selection", sv4_p:"I compare proposals using consistent technical and business criteria, with no commercial interest in the outcome. So you choose for solid reasons, not the best-looking deck.",
-    sv5_h:"Monthly advisory", sv5_p:"You get expert input on your media decisions without expanding your team. Agreed hours each month for reviews, queries and agency meetings. No lock-in.",
+    sv5_h:"Monthly advisory", sv5_p:"You get expert input on your media decisions without expanding your team. Agreed hours each month for reviews, queries and agency meetings. No lock-in.", sv6_h:"In-house media campaign teams", sv6_p:"If you want to bring media buying and optimisation in-house, I design the team with you: the profiles you need, the platforms to license (DSP, ad server, measurement), and what stays inside versus with the agency. I support hiring, set-up and training until the team runs on its own.",
     about_tag:"About", about_title:"I've been on both sides of the table",
     about_p1:"I spent 20 years working in media: first at agencies including Arena Media, Focus Media and Infinity Media, then managing advertising investment within the marketing teams at Affinity Petcare and PepsiCo.",
     stat1_label:"Years in the industry", stat2_label:"€ in advertising investment managed", stat3_label:"Brands supported",
